@@ -1,0 +1,227 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+## 
+
+### Pavan Pyla
+
+### 22232
+
+## R Functions
+
+```{r}
+
+# Create a sequence of numbers 
+print(seq(12,21)) 
+# Find mean of numbers from 25 to 82. 
+print(mean(25:82)) 
+# Find sum of numbers from 1 to 20. 
+print(sum(1:20))
+
+```
+
+```{r}
+Square <- function(a) 
+{ 
+  for (i in 1:a) 
+  { 
+    b <- i^2 
+    print(b)             # prints the first n square numbers
+  } 
+}
+
+Square(10)
+```
+
+```{r}
+Square <- function() 
+{
+ for(i in 1:10) 
+{
+ print(i^2)              # Create a function without an argument
+}
+ }
+Square()
+
+```
+
+```{r}
+maths <- function(a,b,c) 
+{ 
+x <- a*b+c^2
+ print(x)
+ }
+maths(1,2,3)
+maths(a=1,b=2,c=3)
+
+```
+
+```{r}
+default <- function(a = 3,b =6) 
+{ z <- a*b 
+print(z) 
+}
+default()
+
+
+```
+
+```{r}
+new <- function(a, b) 
+{ 
+  print(a^2) 
+  print(a) 
+  print(b)
+
+}
+new(2,8)
+```
+
+```{r}
+new <- function(a, b) #Lazy Evaluation of Function
+{ 
+  print(a^2) 
+  print(a)   
+
+
+}
+new(2)  # Evaluate the function without supplying one of the arguments
+        # wont show error until we try to the orgument b
+```
+
+```{r}
+new <- function(a, b) 
+{ 
+  print(a^2) 
+  print(a) 
+  print(b)
+  
+
+}
+new(2,5)
+
+```
+
+```{r}
+# Create a function with arguments.
+default <- function(a = 3,b =6)
+{ z <- a*b
+print(z)
+}
+default()
+```
+
+```{r}
+# Create a function to print squares of numbers in sequence.
+new.function <- function(a) {
+   for(i in 1:a) {
+      b <- i^2
+      print(b)
+   }
+}	
+
+
+
+new.function(6)
+```
+
+```{r}
+
+
+pow <- function(x, y) 
+{
+                                    # function to print x raised to the power y
+  result <- x^y
+  print(paste(x,"raised to the power", y, "is", result))
+}
+
+pow(8, 2)
+```
+
+```{r}
+pow(2,8)
+```
+
+```{r}
+f <- function(a, b) {
+print(a)
+
+}                              # another example for lazy evaluation
+f(45)
+
+```
+
+## R Strings
+
+#### Some valid strings
+
+```{r}
+a <- ' Start and end with single quote '
+print(a) 
+
+```
+
+```{r}
+b <- "Start and end with double quotes" 
+print(b) 
+
+```
+
+```{r}
+c <- "single quote ' in between double quotes"
+print(c) 
+d <- 'Double quotes " in between single quote' 
+print(d)
+
+```
+
+```{r}
+a <- "Hello" 
+b <- 'How'              #intializing stings 
+c <- "are you? " 
+print(paste(a,b,c))                     #printing them accordingly
+print(paste(a,b,c, sep = "-")) 
+print(paste(a,b,c, sep = "", collapse = ""))
+
+
+```
+
+#### Some String Operations in R
+
+```{r}
+grep("b+", c("abc", "bda", "cca a", "abd"), perl=TRUE, value=FALSE)  
+
+#pattren matching search and printing that spacified position
+```
+
+```{r}
+grep("a+",c('america','australia','india','pakistan')) # a in all strings
+```
+
+```{r}
+str <- "MSc Data Science"
+nchar(str)  #counts the no of characters in a string
+```
+
+```{r}
+str <- "Pavan Pyla       ."
+nchar(str)  # space also counted as one character
+```
+
+```{r}
+#printing all strings in concatinating manner
+paste('My','name','is','pavan') 
+```
+
+```{r}
+num <- "12345678"
+substr(num, 4, 5) # printng the substring from the desired position
+substr(num, 5, 7)
+```
+
+```{r}
+str = "abc efg hi j k l"
+strsplit(str, " ") # this function splits string wherever it finds a " " this
+```
