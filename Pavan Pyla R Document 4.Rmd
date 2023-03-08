@@ -1,0 +1,138 @@
+### Pavan Pyla 
+
+### 22232
+
+## Bar Plots
+
+```{r}
+# x-axis values
+x1 <- c("A", "B", "C", "D")
+
+# y-axis values
+y1 <- c(2, 4, 6, 8)
+
+barplot(y1, names.arg = x1, col ='green')
+```
+
+```{r}
+x2 <- c("A", "B", "C", "D")
+y2 <- c(2, 4, 6, 8)
+
+barplot(y2, names.arg = x2, col = "red")
+```
+
+```{r}
+x3 <- c("A", "B", "C", "D")
+y3 <- c(2, 4, 6, 8)
+
+barplot(y3 ,names.arg = x3, density = 10)
+```
+
+## Pie Charts
+
+```{r}
+x <- c(1,2,3,4,5)
+
+
+pie(x)
+```
+
+```{r}
+x <- c(1,2,3,4,5,6,7,8,9,90)
+
+
+pie(x)
+```
+
+```{r}
+x <- c(30,20,60,10)
+
+
+mylabel <- c("Study", "Play", "Sleep", "Chill")
+
+
+pie(x, label = mylabel, main = "Routine")
+```
+
+## Scatter Plots
+
+```{r}
+x <- c(1,2,3,4,5,6,7,8)
+y <- c(50,60,50,70,87,90,91,96)
+
+plot(x, y, main="Observation", xlab="Stusy time in Hours", ylab="Marks")
+```
+
+```{r}
+x <- c(1,2,3,4,5,6,7,8,1,6)
+y <- c(1,2,3,4,3,45,7,5,45,9)        # Some Random Vectors
+plot(x,y)
+```
+
+## Line Charts
+
+```{r}
+
+plot(1:16, type="l",col='red') # Drawing a line chart with x and y as same in parameters
+```
+
+```{r}
+plot(1:10, type="l", lwd=5, lty=3) # Dotted line plotting
+```
+
+```{r}
+line1 <- c(1,2,3,4,5,6)
+line2 <- c(9,4,8,3,7,3)
+
+plot(line1, type = "l", col = "blue")
+lines(line2, type="l", col = "red")
+```
+
+## Box Plot
+
+```{r}
+input <- mtcars[,c('mpg','cyl')]
+print(head(input))         # We have import cars data set which is inbuilt
+```
+
+```{r}
+boxplot(mpg ~ cyl, data = mtcars, xlab = "Number of Cylinders",
+   ylab = "Miles Per Gallon", main = "Mileage Data",col='red')
+
+```
+
+```{r}
+# add title, label, new color to boxplot
+boxplot(mtcars$mpg,
+  main="Mileage Data Boxplot",
+  ylab="Miles Per Gallon(mpg)",            # Drawing Box plot only for Milage
+  xlab="No. of Cylinders",
+  col="orange")
+```
+
+## Histograms
+
+```{r}
+
+                                    # Create data for the graph.
+v <- c(19, 23, 11, 5, 16, 21, 32,
+       14, 19, 27, 39)
+ # Create the histogram.
+hist(v, xlab = "No.of Articles ",
+     col = "green", border = "black")
+                                              
+```
+
+```{r}
+v <- c(1,2,3,4,5,4,3,2,1)
+     
+# Creating the histogram.
+hist(v, xlab = "Weight", ylab ="Frequency",
+     xlim = c(1, 10),
+    col = "darkmagenta", border = "pink",
+    )
+```
+
+```{r}
+
+```
